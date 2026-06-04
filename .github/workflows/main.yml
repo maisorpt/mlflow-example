@@ -42,5 +42,7 @@ jobs:
       
       # Run as a mlflow project
       - name: Run mlflow project
+        env:
+         MLFLOW_ALLOW_FILE_STORE: "true"
         run: |
          mlflow run Project --env-manager=local --backend local
